@@ -1,0 +1,3 @@
+Pillow
+pyTelegramBotApi
+flask

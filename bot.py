@@ -21,7 +21,8 @@ def txt_handler(m):
         if len(quote) < 3:
             return
         im = getimg(quote)
-        bot.send_photo(chat_id=m.chat.id, photo=im, caption=f"#цитата ({quote[2]})")
+        bot.send_photo(chat_id=m.chat.id, photo=im, caption=f"#цитата ({quote[2][2:]})")
+        bot.delete_message(chat_id=m.chat.id, message_id=m.message_id)
 
 
 bot.infinity_polling()
